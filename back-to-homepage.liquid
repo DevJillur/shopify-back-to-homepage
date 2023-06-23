@@ -1,0 +1,48 @@
+<section class="custom-section">
+  <div class="back-btn-wrapper">
+  
+    <a href="{{ routes.root_url }}" class="back-btn">{{ section.settings.btn_label }}</a>
+    
+  </div>
+</section>
+
+<style>
+.back-btn {
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: .2s;
+}
+.back-btn:hover {
+    font-weight: bold;
+    transition: .2s;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Back to Home",
+  "class": "bacck_to_home_section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Back to home section"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Back button label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Back to Home"
+    }
+  ]
+}
+{% endschema %}
